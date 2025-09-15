@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+</head>
+
+<body>
+    <hr>
+    <h1>CodingGita Feedback Form</h1>
+    <p>We value your feedback. Please fill out this form to help us improve.</p>
+    <hr>
+    <form action="#" method="post">
+
+        <label for="">Name</label>
+        <input type="text"><br><br>
+
+        Email:
+        <input type="email"><br><br>
+
+        <P>Which course/workshop are you giving feedback for?</P>
+        <select name="" id="">
+            <optgroup>
+               <option value="">MERN Stack Course</option>
+               <option value="">DSA Bootcamp</option>
+               <option value="">Web Development Workshop</option>
+            </optgroup>
+        </select><br><br>
+
+        Rate your experience: <br>
+        <input type="radio" name="na" id="1">
+        <label for="1">1 Star</label>
+        <input type="radio" name="na" id="2">
+        <label for="2">2 Star</label>
+        <input type="radio" name="na" id="3">
+        <label for="3">3 Star</label>
+        <input type="radio" name="na" id="4">
+        <label for="4">4 Star</label>
+        <input type="radio" name="na" id="5">
+        <label for="5">5 Star</label><br><br>
+
+        What aspects are you giving feedback on?<br>
+        <input type="checkbox" name="na" id="1.">
+        <label for="1.">Content Quality</label><br>
+        <input type="checkbox" name="na" id="2.">
+        <label for="2.">Teaching Method</label><br>
+        <input type="checkbox" name="na" id="3.">
+        <label for="3.">Support & Guidance</label><br>
+        <input type="checkbox" name="na" id="4.">
+        <label for="4.">Overall Experience</label><br><br>
+
+        Additional Suggestions: <br>
+        <textarea name="" id="" cols="50" rows="8" placeholder="Enter a suggedtions"></textarea>
+        <br><br>
+        How satisfied are you? <br>
+        <input type="range" name="satisfied" value="0" min="0" max="10" 
+         oninput="output.value = this.value">
+         <output id="output"></output> <br><br>  
+
+         Would you recommend us?<br>
+         <input type="radio" id="yes" name="?">
+         <label for="yes">YES</label>
+         <input type="radio" id="No" name="?">
+         <label for="No">NO</label> <br><br>
+
+         Date of Feedback: 
+         <input type="date">
+         <br><br>
+         <hr>
+         <input type="submit" value="Submit">
+         <input type="reset" value="Reset">
+         <hr>
+       
+    </form>
+</body>
+
+</html>

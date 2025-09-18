@@ -1,0 +1,44 @@
+p{
+    font-size: x-large;
+    line-height: 1;
+}
+#site-title{
+    color: cornflowerblue;
+    text-align: center;
+    padding: 5%;
+    background-image: url(https://t3.ftcdn.net/jpg/09/05/66/02/360_F_905660277_YGCNb5LbwTa1EZMEjWp0WIYo3qngCN9I.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+a{
+    color: rgb(85, 150, 255);
+    text-decoration:underline rgb(255, 255, 255);
+}
+.muted{
+    color: gray;
+}
+h2 + p {
+  font-style: italic;
+  color: rgb(207, 106, 106);
+}
+.highlight{
+    background-color: rgb(195, 251, 253);
+    border: 1px solid;
+}
+.highlight-text{  
+    background-color: lightblue;
+}
+    #override{
+        background-color: rgb(231, 231, 75);
+    }
+
+.striped-list li:nth-child(odd){
+  background-color: rgb(173, 173, 173);
+}
+.striped-list li:nth-child(even){
+  background-color: rgb(235, 235, 235);
+}
+ul{
+ list-style: square;
+}

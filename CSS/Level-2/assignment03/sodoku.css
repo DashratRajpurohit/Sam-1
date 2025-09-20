@@ -1,0 +1,25 @@
+
+.main{
+    display: flex;
+    border: 5px solid black;
+    justify-content: space-evenly;
+    width: 900px;
+    height: auto;
+    margin-left:20% ;
+}
+
+.sudoku
+{
+    display: flex;
+   flex-wrap: wrap;
+   width: 360px;
+   
+}
+.answer{
+    display: flex;
+   flex-wrap: wrap;
+   width: 360px;
+}
+table{
+    
+}

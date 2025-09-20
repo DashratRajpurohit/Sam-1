@@ -1,0 +1,94 @@
+.main{
+    display: flex;
+    flex-wrap: wrap;
+   justify-content: space-between;
+    border: 2px solid black;
+    height: 600px;
+    width: 600px;
+}
+.red{
+    
+    background-color: red;
+    width: 240px;
+    height: 240px;
+}
+.greenbox{
+    width: 120px;
+    height: 240px;
+    display: flex;
+    flex-wrap:  wrap;
+}
+.GB1{
+    border: 1px solid black;
+    width: 38px;
+    height:38px;
+}
+.GB1-g{
+    border: 1px solid black;
+    width: 38px;
+    height:38px;
+    background-color: green;
+}
+.GB1-s{
+    border: 1px solid black;
+    width: 38px;
+    height:38px;
+    background-color: green;
+    
+}
+.green{
+    background-color: green;
+    width: 240px;
+    height: 240px;
+}
+.redbox{
+    width: 240px;
+    height: 120px;
+    display: flex;
+    flex-wrap:  wrap;
+
+}
+.RB1{
+    border: 1px solid black;
+    width: 38px;
+    height:38px;
+}
+.center{
+    border: 2px solid black;
+    width: 116px;
+    height:116px;
+}
+.yellobox{
+    width: 240px;
+    height: 120px;
+    display: flex;
+    flex-wrap:  wrap;
+
+}
+.YB1{
+    border: 1px solid black;
+    width: 38px;
+    height:38px;
+}
+.blue{
+    
+    background-color: blue;
+    width: 240px;
+    height: 240px;
+}
+.bluebox{
+    width: 120px;
+    height: 240px;
+    display: flex;
+    flex-wrap:  wrap;
+}
+.BB1{
+    border: 1px solid black;
+    width: 38px;
+    height:38px;
+}
+.yellow{
+    background-color:yellow;
+    width: 240px;
+    height: 240px;
+}

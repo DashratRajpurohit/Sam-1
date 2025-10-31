@@ -1,0 +1,100 @@
+.main{
+width: 100%;
+height: 100%;
+font-family: Arial, Helvetica, sans-serif;
+}
+.nav{
+background-color: rgb(41, 41, 51);
+width: 100%;
+height:4% ;
+display: flex;
+align-items: center;
+justify-content: space-between;
+color: white;
+}
+.location{
+    display: flex;
+}
+.search{
+    background-color: aliceblue;
+    color: gray;
+    height: 40px;
+    width: 600px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   border-radius: 10px;
+}
+.nav2{
+background-color: rgb(17, 46, 63);
+
+height:2% ;
+display: flex;
+align-items: center;
+justify-content: space-between;
+color: white;
+padding-left: 20px;
+}
+p{
+    display: inline;
+    margin-right: 4px;
+    font-size: small;
+}
+.body1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-left: 1%;
+    width: 94%;
+    height: 94%;
+    padding: 2%;
+    padding-bottom: 0;
+    background-image: url(https://github.com/DashratRajpurohit/CGxSU_Semester_1/blob/main/html_css_js/CSS/00.assignment/02.level_2/09.amazon-clone/assets/background%20picture.png?raw=true);
+    
+}
+.arrow{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+     width: 100%;
+     padding-top: 7%;
+     padding-bottom: 8%;
+}
+.card1{
+    width: 100%;
+    height: 350px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.box1{
+    background-color: aliceblue;
+    
+    width: 22%;
+    height: 100%;
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+    
+}
+.box11{
+    width: 22%;
+    height: 100%;
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+    
+}
+.inbox{
+    background-color: aliceblue;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 40%;
+}

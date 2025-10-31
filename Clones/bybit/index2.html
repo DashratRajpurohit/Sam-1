@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bybit - Trade Crypto Derivatives</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #0e0e23;
+            color: #fff;
+            line-height: 1.6;
+        }
+        
+        .wrapper {
+            max-width: 480px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+       
+        .topBar {
+            background-color: #131735;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid #2a2e4b;
+        }
+        
+        .headerRow {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .brand {
+            font-size: 24px;
+            font-weight: bold;
+            color: #fff;
+            display: flex;
+            align-items: center;
+        }
+        
+        .brand span {
+            color: orange;
+        }
+        
+        .actionIcons {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .actionIcons i {
+            font-size: 20px;
+            color: #a0a4c2;
+        }
+        
+        .profileIcon {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background-color: orange;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        
+        .balanceCard {
+            background: linear-gradient(135deg, #1c1f3a, #131735);
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 15px;
+            border: 1px solid #2a2e4b;
+        }
+        
+        .balanceHeader {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        
+        .balanceLabel {
+            color: #a0a4c2;
+            font-size: 14px;
+        }
+        
+        .balanceValue {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        .balanceTrend {
+            color: #00c087;
+            font-size: 14px;
+        }
+        
+        .balanceActions {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        
+        .actionBtn {
+            flex: 1;
+            padding: 10px;
+            border-radius: 6px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 14px;
+        }
+        
+        .primaryBtn {
+            background-color: orange;
+            color: #fff;
+        }
+        
+        .secondaryBtn {
+            border: 1px solid #2a2e4b;
+            color: #fff;
+        }
+        
+       
+        .navContainer {
+            display: flex;
+            justify-content: space-between;
+            background-color: #131735;
+            border-radius: 10px;
+            padding: 5px;
+            margin: 15px 0;
+        }
+        
+        .navItem {
+            flex: 1;
+            text-align: center;
+            padding: 10px;
+            font-size: 14px;
+            color: #a0a4c2;
+            border-radius: 8px;
+        }
+        
+        .navItem.active {
+            background-color: orange;
+            color: #fff;
+            font-weight: 600;
+        }
+        
+       
+        .sectionHeader {
+            font-size: 18px;
+            margin: 20px 0 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .sectionHeader a {
+            color: orange;
+            font-size: 14px;
+            text-decoration: none;
+        }
+        
+        .marketList {
+            background-color: #131735;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid #2a2e4b;
+        }
+        
+        .marketRow {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px;
+            border-bottom: 1px solid #2a2e4b;
+        }
+        
+        .marketRow:last-child {
+            border-bottom: none;
+        }
+        
+        .coinInfo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .coinIcon {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background-color: #2a2e4b;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        
+        .coinName {
+            font-weight: 600;
+        }
+        
+        .priceInfo {
+            text-align: right;
+        }
+        
+        .priceChange {
+            font-size: 14px;
+            margin-top: 3px;
+        }
+        
+        .up {
+            color: #00c087;
+        }
+        
+        .down {
+            color:orange;
+        }
+        
+        .pairSelector {
+            display: flex;
+            gap: 10px;
+            overflow-x: auto;
+            padding: 5px 0 15px;
+            margin-bottom: 10px;
+        }
+        
+        .pairOption {
+            background-color: #131735;
+            border-radius: 8px;
+            padding: 10px 15px;
+            white-space: nowrap;
+            border: 1px solid #2a2e4b;
+        }
+        
+        .pairOption.active {
+            background-color: orange;
+            color: #fff;
+        }
+        
+       
+        .tradingPanel {
+            background-color: #131735;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 1px solid #2a2e4b;
+        }
+        
+        .chartBox {
+            height: 200px;
+            background: linear-gradient(135deg, #1c1f3a, #131735);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+            color: #a0a4c2;
+        }
+        
+        .tradeButtons {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .tradeBtn {
+            flex: 1;
+            padding: 12px;
+            border-radius: 6px;
+            text-align: center;
+            font-weight: 600;
+        }
+        
+        .buyBtn {
+            background-color: #00c087;
+            color: #fff;
+        }
+        
+        .sellBtn {
+            background-color:orange;
+            color: #fff;
+        }
+        
+       
+        .bottomNav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: #131735;
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+            border-top: 1px solid #2a2e4b;
+        }
+        
+        .navIcon {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #a0a4c2;
+            font-size: 12px;
+        }
+        
+        .navIcon.active {
+            color:orange;
+        }
+        
+        .navIcon i {
+            font-size: 20px;
+            margin-bottom: 4px;
+        }
+        
+       
+        @media (max-width: 480px) {
+            .wrapper {
+                padding-bottom: 70px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="topBar">
+        <div class="wrapper">
+            <div class="headerRow">
+                <div class="brand">BYB<span><sup>I</sup></span>T</div>
+                <div class="actionIcons">
+                    <i class="fas fa-bell"></i>
+                    <i class="fas fa-history"></i>
+                    <div class="profileIcon">U</div>
+                </div>
+            </div>
+            
+            <div class="balanceCard">
+                <div class="balanceHeader">
+                    <div class="balanceLabel">Total Balance</div>
+                    <div class="balanceTrend">+2.5%</div>
+                </div>
+                <div class="balanceValue">$12,458.32</div>
+                <div class="balanceActions">
+                    <div class="actionBtn primaryBtn">Deposit</div>
+                    <div class="actionBtn secondaryBtn">Withdraw</div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <main class="wrapper">
+        <div class="navContainer">
+            <div class="navItem active">Trade</div>
+            <div class="navItem">Markets</div>
+            <div class="navItem">Assets</div>
+            <div class="navItem">Earn</div>
+        </div>
+        
+        <div class="pairSelector">
+            <div class="pairOption active">BTC/USDT</div>
+            <div class="pairOption">ETH/USDT</div>
+            <div class="pairOption">SOL/USDT</div>
+        </div>
+        
+        <div class="tradingPanel">
+            <div class="chartBox">
+                Trading Chart
+            </div>
+            <div class="tradeButtons">
+                <div class="tradeBtn buyBtn">Buy/Long</div>
+                <div class="tradeBtn sellBtn">Sell/Short</div>
+            </div>
+        </div>
+        
+        <div class="sectionHeader">
+            <h3>Spot Markets</h3>
+            <a href="#">More</a>
+        </div>
+        
+        <div class="marketList">
+            <div class="marketRow">
+                <div class="coinInfo">
+                    <div class="coinIcon">B</div>
+                    <div>
+                        <div class="coinName">BTC/USDT</div>
+                        <div class="marketVolume">Vol: $1.2B</div>
+                    </div>
+                </div>
+                <div class="priceInfo">
+                    <div class="marketValue">$41,258.90</div>
+                    <div class="priceChange up">+2.35%</div>
+                </div>
+            </div>
+            
+            <div class="marketRow">
+                <div class="coinInfo">
+                    <div class="coinIcon">E</div>
+                    <div>
+                        <div class="coinName">ETH/USDT</div>
+                        <div class="marketVolume">Vol: $850.3M</div>
+                    </div>
+                </div>
+                <div class="priceInfo">
+                    <div class="marketValue">$2,458.32</div>
+                    <div class="priceChange up">+1.78%</div>
+                </div>
+            </div>
+            
+            <div class="marketRow">
+                <div class="coinInfo">
+                    <div class="coinIcon">S</div>
+                    <div>
+                        <div class="coinName">SOL/USDT</div>
+                        <div class="marketVolume">Vol: $320.1M</div>
+                    </div>
+                </div>
+                <div class="priceInfo">
+                    <div class="marketValue">$102.45</div>
+                    <div class="priceChange down">-0.65%</div>
+                </div>
+            </div>
+            
+            <div class="marketRow">
+                <div class="coinInfo">
+                    <div class="coinIcon">X</div>
+                    <div>
+                        <div class="coinName">XRP/USDT</div>
+                        <div class="marketVolume">Vol: $180.5M</div>
+                    </div>
+                </div>
+                <div class="priceInfo">
+                    <div class="marketValue">$0.5789</div>
+                    <div class="priceChange up">+0.42%</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="sectionHeader">
+            <h3>Futures Markets</h3>
+            <a href="#">More</a>
+        </div>
+        
+        <div class="marketList">
+            <div class="marketRow">
+                <div class="coinInfo">
+                    <div class="coinIcon">B</div>
+                    <div>
+                        <div class="coinName">BTCUSDT</div>
+                        <div class="marketVolume">Perpetual</div>
+                    </div>
+                </div>
+                <div class="priceInfo">
+                    <div class="marketValue">$41,245.50</div>
+                    <div class="priceChange up">+2.41%</div>
+                </div>
+            </div>
+            
+            <div class="marketRow">
+                <div class="coinInfo">
+                    <div class="coinIcon">E</div>
+                    <div>
+                        <div class="coinName">ETHUSDT</div>
+                        <div class="marketVolume">Perpetual</div>
+                    </div>
+                </div>
+                <div class="priceInfo">
+                    <div class="marketValue">$2,452.80</div>
+                    <div class="priceChange up">+1.82%</div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <nav class="bottomNav">
+        <div class="navIcon active">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+        </div>
+        <div class="navIcon">
+            <i class="fas fa-chart-line"></i>
+        </div>
+            <span><a href="index3.html" style="text-decoration: none; color: rgb(135, 135, 135);">Markets</a></span>
+        </div>
+        <div class="navIcon">
+            <i class="fas fa-wallet"></i>
+            <span>Wallet</span>
+        </div>
+        <div class="navIcon">
+            <i class="fas fa-user"></i>
+            <span>Account</span>
+        </div>
+    </nav>
+</body>
+</html>

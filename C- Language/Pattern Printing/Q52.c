@@ -1,10 +1,10 @@
 #include<stdio.h>
 int main()
 {
-    for(int i=1;i<=5;i++){
-        for(int j=2;j<=6;j++){
-            printf("%d",(i+j)%2);
-            printf(" ");
+    int n=5;
+    for(int i=1;i<=n;i++){
+        for(int j=2;j<=n+1;j++){
+            printf("%d   ",(i+j)%2);
         }
         printf("\n");
     }

@@ -6,11 +6,32 @@
     height: 600px;
     width: 600px;
 }
+
 .red{
-    
+     display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: red;
     width: 240px;
     height: 240px;
+}
+.White{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+   
+    width: 160px;
+    height: 160px;
+    background-color: white;
+   
+}
+.Rc{
+    border: 5px solid red;
+    border-radius: 50%;
+     margin: 19px;
+    width: 32px;
+    height: 32px;
 }
 .greenbox{
     width: 120px;
@@ -30,6 +51,9 @@
     background-color: green;
 }
 .GB1-s{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: 1px solid black;
     width: 38px;
     height:38px;
@@ -37,9 +61,19 @@
     
 }
 .green{
+     display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: green;
     width: 240px;
     height: 240px;
+}
+.Gc{
+    border: 5px solid green;
+    border-radius: 50%;
+     margin: 19px;
+    width: 32px;
+    height: 32px;
 }
 .redbox{
     width: 240px;
@@ -52,6 +86,22 @@
     border: 1px solid black;
     width: 38px;
     height:38px;
+}
+.RB1-r{
+    border: 1px solid black;
+    width: 38px;
+    height:38px;
+    background-color: red;
+}
+.RB1-s{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    width: 38px;
+    height:38px;
+    background-color:red;
+    
 }
 .center{
     border: 2px solid black;
@@ -70,11 +120,36 @@
     width: 38px;
     height:38px;
 }
-.blue{
+.YB1-y{
+    border: 1px solid black;
+    width: 38px;
+    height:38px;
+    background-color: yellow;
+}
+.YB1-s{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    width: 38px;
+    height:38px;
+    background-color:yellow;
     
+}
+.blue{
+     display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: blue;
     width: 240px;
     height: 240px;
+}
+.Bc{
+    border: 5px solid blue;
+    border-radius: 50%;
+     margin: 19px;
+    width: 32px;
+    height: 32px;
 }
 .bluebox{
     width: 120px;
@@ -87,8 +162,39 @@
     width: 38px;
     height:38px;
 }
+.BB1-b{
+    border: 1px solid black;
+    width: 38px;
+    height:38px;
+    background-color:blue;
+}
+.BB1-s{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    width: 38px;
+    height:38px;
+    background-color:blue;
+    
+}
 .yellow{
+     display: flex;
+    justify-content: center;
+    align-items: center;
     background-color:yellow;
     width: 240px;
     height: 240px;
+}
+.Yc{
+    border: 5px solid yellow;
+    border-radius: 50%;
+     margin: 19px;
+    width: 32px;
+    height: 32px;
+}
+.center{
+    background-image: url(https://res.cloudinary.com/dyp6zbyjd/image/upload/v1758606326/Screenshot_2025-09-23_111227_den5sx.png);
+    background-size: cover;
+    
 }

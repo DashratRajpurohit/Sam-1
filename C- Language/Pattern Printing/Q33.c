@@ -1,13 +1,14 @@
 #include<stdio.h>
 int main()
 {
-    for(int i=1;i<=5; i++){
-        for(int j=5; j>=i; j--){
-            if(i==3 && j==4 || i==2 && (j==4 || j==3)){
-               printf(" ");
+    int n=7;
+    for(int i=1;i<=n; i++){
+        for(int j=n; j>=i; j--){
+            if(i==1 || j==i || j==n){
+               printf("*");
             }
             else{
-                printf("*");
+                printf(" ");
             }
             
         }

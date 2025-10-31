@@ -1,0 +1,19 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.main{
+    background-image: url(https://raw.githubusercontent.com/DashratRajpurohit/CGxSU_Semester_1/refs/heads/main/html_css_js/CSS/00.assignment/02.level_2/06.cricket_app/backgroud.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0px 20px 30px gray;
+    width: 1350px;
+    margin-left: 18px;
+    height: 700px;
+    padding: 20px;
+}
+.logo{
+    display: flex;
+    justify-content: flex-end;
+}

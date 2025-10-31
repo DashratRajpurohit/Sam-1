@@ -1,0 +1,67 @@
+.main{
+    display: flex;
+    justify-content: center;
+    justify-content: sp;
+    background-image: url(https://t3.ftcdn.net/jpg/08/45/32/94/360_F_845329448_9B63Ehb5zO9LR4J7VaFRLkHqTYoGi7Z7.jpg);
+    border: 5px solid black;
+    background-repeat: no-repeat;
+    background-size: cover ;
+    height: 600px;
+    width: 1400px;
+    flex-wrap: wrap;
+}
+.logo{
+    margin-left:640px ;
+    margin-right: 640px;
+}
+.ind{
+    text-align: center;
+    height: 220px;
+    width: 300px;
+    background-color: rgb(46, 88, 215);
+    border-radius: 15px;
+    margin: 40px;
+    margin-left: 340px;
+}
+.pak{
+    text-align: center;
+    height: 220px;
+    width: 300px;
+    background-color: rgb(79, 171, 100);
+    border-radius: 15px;
+    margin: 40px;
+    margin-right: 340px;
+}
+p{
+    font-size: 30px;
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    margin: 2px;
+
+}
+h1{
+    color: white;
+}
+.symbol{
+    height: 55px;
+    width: 55px;
+    border: 4px solid white;
+    border-radius: 19px;
+    background-color: rgb(238, 168, 6);
+    margin: 20px;
+    background-image: url(https://img.icons8.com/?size=100&id=13zzOsnFzFWn&format=png&color=FFFFFF);
+    background-size: cover;
+}
+.symbol1{
+    height: 55px;
+    width: 55px;
+    border: 4px solid white;
+    border-radius: 19px;
+    background-color: rgb(187, 2, 2);
+    margin: 20px;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE2IDE2Ij48cGF0aCBmaWxsPSIjZmZmIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xMi43NSA4YTQuNSA0LjUgMCAwIDEtOC42MSAxLjgzNGwtMS4zOTEuNTY1QTYuMDAxIDYuMDAxIDAgMCAwIDE0LjI1IDhBNiA2IDAgMCAwIDMuNSA0LjMzNFYyLjVIMnY0bC43NS43NWgzLjV2LTEuNUg0LjM1MkE0LjUgNC41IDAgMCAxIDEyLjc1IDgiIGNsaXAtcnVsZT0iZXZlbm9kZCIvPjwvc3ZnPg==);
+    background-size: cover;
+}

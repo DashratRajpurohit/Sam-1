@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markets - Bybit</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="marketHeader">
+        <div class="pageContainer">
+            <div class="headerContent">
+                <div class="logoText"> BYB<span><sup>I</sup></span>T</div>
+                <div class="headerIcons">
+                    <i class="fas fa-bell"></i>
+                    <i class="fas fa-star"></i>
+                    <div class="userProfile">U</div>
+                </div>
+            </div>
+            
+            <div class="searchContainer">
+                <i class="fas fa-search"></i>
+                <input type="text" class="searchInput" placeholder="Search for a coin...">
+            </div>
+        </div>
+    </header>
+    
+    <main class="pageContainer">
+        <div class="marketTabs">
+            <div class="marketTab">Spot</div>
+            <div class="marketTab active">Futures</div>
+            <div class="marketTab">Options</div>
+            <div class="marketTab">ETF</div>
+        </div>
+        
+        <div class="filterRow">
+            <div class="filterGroup">
+                <button class="filterBtn active">All</button>
+                <button class="filterBtn">USDT</button>
+                <button class="filterBtn">USD</button>
+            </div>
+            <button class="sortBtn">
+                <i class="fas fa-sort-amount-down"></i> 24h Change
+            </button>
+        </div>
+        
+        <div class="sectionTitle">
+            <h3>Favorites</h3>
+            <a href="#">Edit</a>
+        </div>
+        
+        <div class="favoritesGrid">
+            <div class="favoriteItem">
+                <div class="favoriteIcon">B</div>
+                <div class="favoriteName">BTC</div>
+                <div class="favoritePrice">$41,258</div>
+            </div>
+            <div class="favoriteItem">
+                <div class="favoriteIcon">E</div>
+                <div class="favoriteName">ETH</div>
+                <div class="favoritePrice">$2,458</div>
+            </div>
+            <div class="favoriteItem">
+                <div class="favoriteIcon">S</div>
+                <div class="favoriteName">SOL</div>
+                <div class="favoritePrice">$102.45</div>
+            </div>
+        </div>
+        
+        <div class="gainersLosers">
+            <div class="glCard">
+                <div class="glTitle">Top Gainers</div>
+                <div class="glItem">
+                    <div class="glCoin">BTC</div>
+                    <div class="glChange positiveChange">+5.2%</div>
+                </div>
+                <div class="glItem">
+                    <div class="glCoin">ETH</div>
+                    <div class="glChange positiveChange">+3.7%</div>
+                </div>
+                <div class="glItem">
+                    <div class="glCoin">ADA</div>
+                    <div class="glChange positiveChange">+2.9%</div>
+                </div>
+            </div>
+            
+            <div class="glCard">
+                <div class="glTitle">Top Losers</div>
+                <div class="glItem">
+                    <div class="glCoin">XRP</div>
+                    <div class="glChange negativeChange">-2.1%</div>
+                </div>
+                <div class="glItem">
+                    <div class="glCoin">DOT</div>
+                    <div class="glChange negativeChange">-1.8%</div>
+                </div>
+                <div class="glItem">
+                    <div class="glCoin">LTC</div>
+                    <div class="glChange negativeChange">-1.2%</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="sectionTitle">
+            <h3>All Markets</h3>
+            <a href="#">See All</a>
+        </div>
+        
+        <div class="marketList">
+            <div class="marketItem">
+                <div class="coinData">
+                    <div class="coinSymbol">B</div>
+                    <div class="coinDetails">
+                        <div class="coinName">BTCUSDT</div>
+                        <div class="coinFullName">Bitcoin</div>
+                    </div>
+                </div>
+                <div class="priceData">
+                    <div class="currentPrice">$41,258.90</div>
+                    <div class="priceChange positiveChange">+2.35%</div>
+                </div>
+            </div>
+            
+            <div class="marketItem">
+                <div class="coinData">
+                    <div class="coinSymbol">E</div>
+                    <div class="coinDetails">
+                        <div class="coinName">ETHUSDT</div>
+                        <div class="coinFullName">Ethereum</div>
+                    </div>
+                </div>
+                <div class="priceData">
+                    <div class="currentPrice">$2,458.32</div>
+                    <div class="priceChange positiveChange">+1.78%</div>
+                </div>
+            </div>
+            
+            <div class="marketItem">
+                <div class="coinData">
+                    <div class="coinSymbol">S</div>
+                    <div class="coinDetails">
+                        <div class="coinName">SOLUSDT</div>
+                        <div class="coinFullName">Solana</div>
+                    </div>
+                </div>
+                <div class="priceData">
+                    <div class="currentPrice">$102.45</div>
+                    <div class="priceChange negativeChange">-0.65%</div>
+                </div>
+            </div>
+            
+            <div class="marketItem">
+                <div class="coinData">
+                    <div class="coinSymbol">X</div>
+                    <div class="coinDetails">
+                        <div class="coinName">XRPUSDT</div>
+                        <div class="coinFullName">Ripple</div>
+                    </div>
+                </div>
+                <div class="priceData">
+                    <div class="currentPrice">$0.5789</div>
+                    <div class="priceChange positiveChange">+0.42%</div>
+                </div>
+            </div>
+            
+            <div class="marketItem">
+                <div class="coinData">
+                    <div class="coinSymbol">A</div>
+                    <div class="coinDetails">
+                        <div class="coinName">ADAUSDT</div>
+                        <div class="coinFullName">Cardano</div>
+                    </div>
+                </div>
+                <div class="priceData">
+                    <div class="currentPrice">$0.5123</div>
+                    <div class="priceChange positiveChange">+1.25%</div>
+                </div>
+            </div>
+            
+            <div class="marketItem">
+                <div class="coinData">
+                    <div class="coinSymbol">D</div>
+                    <div class="coinDetails">
+                        <div class="coinName">DOTUSDT</div>
+                        <div class="coinFullName">Polkadot</div>
+                    </div>
+                </div>
+                <div class="priceData">
+                    <div class="currentPrice">$7.23</div>
+                    <div class="priceChange negativeChange">-0.89%</div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <nav class="bottomNav">
+        <div class="navItem">
+            <i class="fas fa-home"></i>
+            <span><a href="index2.html" style="color: rgb(183, 180, 180); text-decoration: none;">Home</a></span>
+        </div>
+        <div class="navItem active">
+            <i class="fas fa-chart-line"></i>
+            <span>Markets</span>
+        </div>
+        <div class="navItem">
+            <i class="fas fa-wallet"></i>
+            <span>Wallet</span>
+        </div>
+        <div class="navItem">
+            <i class="fas fa-user"></i>
+            <span>Account</span>
+        </div>
+    </nav>
+</body>
+</html>

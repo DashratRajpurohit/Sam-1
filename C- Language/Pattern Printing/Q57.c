@@ -7,7 +7,7 @@ int main ()
           int top=i-1;
           int left=j-1;
           int bot=n-i;
-          int right=n-j;
+          int right=n-j;  
 
           if(top<=bot && top<=left && top<=right){
             printf("%d",top+1);
